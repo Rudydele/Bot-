@@ -80,9 +80,9 @@ def decide_move(board: list, player_id: str) -> list:
         return [2,2]
 
     #Asegurar victoria vertical arriba para abajo
-    if board [0][0] == player_id and board[1][0] == player_id and [2][0] == "-":
+    if board [0][0] == player_id and board[1][0] == player_id and board [2][0] == "-":
         return [2,0] 
-    if board [0][1] == player_id and board[1][1] == player_id and [2][1] == "-":
+    if board [0][1] == player_id and board[1][1] == player_id and board [2][1] == "-":
         return [2,1] 
     if board [0][2] == player_id and board[1][2] == player_id and [2][2] == "-":
         return [2,2] 

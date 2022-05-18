@@ -200,7 +200,7 @@ def decide_move(board: list, player_id: str) -> list:
         return [2,2] 
     #Bloqueo diagonal 2 cubriendo centros
     if board [2][2] == malo and board[0][0] == malo and [1][1] == "-":
-        return [1][1] 
+        return [1,1] 
 
 
     #Mis movimientos (fuera de asegurar victoria, bloquear, buscar centro y buscar una esquina) no son importantes

@@ -75,138 +75,138 @@ def decide_move(board: list, player_id: str) -> list:
 
     #Centro es clave, en caso de perder el centro busco la esquina
     if board [1][1] == "-":
-        return [1,1]
+        return board [1,1]
     if board [1][1] == malo and board [2][2] == "-":
-        return [2,2]
+        return board [2,2]
 
     #Asegurar victoria vertical arriba para abajo
     if board [0][0] == player_id and board[1][0] == player_id and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     if board [0][1] == player_id and board[1][1] == player_id and board [2][1] == "-":
-        return [2,1] 
+        return board [2,1] 
     if board [0][2] == player_id and board[1][2] == player_id and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Asegurar victoria vertical abajo para arriba
     if board [2][0] == player_id and board[1][0] == player_id and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     if board [2][1] == player_id and board[1][1] == player_id and board [0][1] == "-":
-        return [0,1] 
+        return board [0,1] 
     if board [2][2] == player_id and board[1][2] == player_id and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     #Asegurar victoria vertical cubriendo centro
     if board [2][0] == player_id and board[0][0] == player_id and board [1][0] == "-":
-        return [1,0] 
+        return board [1,0] 
     if board [2][1] == player_id and board[0][1] == player_id and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     if board [2][2] == player_id and board[0][2] == player_id and board [1][2] == "-":
-        return [1,2] 
+        return board [1,2] 
     #Asegurar victoria horizontal izquierda a derecha
     if board [0][0] == player_id and board[0][1] == player_id and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     if board [1][0] == player_id and board[1][1] == player_id and board [1][2] == "-":
-        return [1,2] 
+        return board [1,2] 
     if board [2][0] == player_id and board[2][1] == player_id and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Asegurar victoria horizontal derecha a izquierda
     if board [0][2] == player_id and board[0][1] == player_id and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     if board [1][2] == player_id and board[1][1] == player_id and board [1][0] == "-":
-        return [1,0] 
+        return board [1,0] 
     if board [2][2] == player_id and board[2][1] == player_id and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     #Asegurar victoria horizontal cubriendo centros
     if board [0][0] == player_id and board[0][2] == player_id and board [0][1] == "-":
-        return [0,1] 
+        return board [0,1] 
     if board [1][0] == player_id and board[1][2] == player_id and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     if board [2][0] == player_id and board[2][2] == player_id and board [2][1] == "-":
-        return [2,1] 
+        return board [2,1] 
     #Asegurar victoria diagonal 1 de abajo para arriba
     if board [2][0] == player_id and board[1][1] == player_id and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     #Asegurar victoria diagonal 1 de arriba para abajo
     if board [0][2] == player_id and board[1][1] == player_id and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     #Asegurar victoria diagonal 1 cubriendo centro
     if board [2][0] == player_id and board[0][2] == player_id and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     #Asegurar victoria diagonal 2 de abajo para arriba
     if board [2][2] == player_id and board[1][1] == player_id and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     #Asegurar victoria diagonal 2 arriba para abajo
     if board [0][0] == player_id and board[1][1] == player_id and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Asegurar victoria diagonal 2 cubriendo centros
     if board [2][2] == player_id and board[0][0] == player_id and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
 
     #Bloqueo bloqueo
     #Bloqueo vertical arriba para abajo
     if board [0][0] == malo and board[1][0] == malo and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     if board [0][1] == malo and board[1][1] == malo and board [2][1] == "-":
-        return [2,1] 
+        return board [2,1] 
     if board [0][2] == malo and board[1][2] == malo and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Bloqueo vertical abajo para arriba
     if board [2][0] == malo and board[1][0] == malo and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     if board [2][1] == malo and board[1][1] == malo and board [0][1] == "-":
-        return [0,1] 
+        return board [0,1] 
     if board [2][2] == malo and board[1][2] == malo and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     #Bloqueo vertical cubriendo centro
     if board [2][0] == malo and board[0][0] == malo and board [1][0] == "-":
-        return [1,0] 
+        return board [1,0] 
     if board [2][1] == malo and board[0][1] == malo and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     if board [2][2] == malo and board[0][2] == malo and board [1][2] == "-":
-        return [1,2] 
+        return board [1,2] 
     #Bloqueo horizontal izquierda a derecha
     if board [0][0] == malo and board[0][1] == malo and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     if board [1][0] == malo and board[1][1] == malo and board [1][2] == "-":
-        return [1,2] 
+        return board [1,2] 
     if board [2][0] == malo and board[2][1] == malo and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Bloqueo horizontal derecha a izquierda
     if board [0][2] == malo and board[0][1] == malo and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     if board [1][2] == malo and board[1][1] == malo and board [1][0] == "-":
-        return [1,0] 
+        return board [1,0] 
     if board [2][2] == malo and board[2][1] == malo and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     #Bloqueo horizontal cubriendo centros
     if board [0][0] == malo and board[0][2] == malo and board [0][1] == "-":
-        return [0,1] 
+        return board [0,1] 
     if board [1][0] == malo and board[1][2] == malo and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     if board [2][0] == malo and board[2][2] == malo and board [2][1] == "-":
-        return [2,1] 
+        return board [2,1] 
     #Bloqueo diagonal 1 de abajo para arriba
     if board [2][0] == malo and board[1][1] == malo and board [0][2] == "-":
-        return [0,2] 
+        return board [0,2] 
     #Bloqueo diagonal 1 de arriba para abajo
     if board [0][2] == malo and board[1][1] == malo and board [2][0] == "-":
-        return [2,0] 
+        return board [2,0] 
     #Bloqueo diagonal 1 cubriendo centro
     if board [2][0] == malo and board[0][2] == malo and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
     #Bloqueo diagonal 2 de abajo para arriba
     if board [2][2] == malo and board[1][1] == malo and board [0][0] == "-":
-        return [0,0] 
+        return board [0,0] 
     #Bloqueo diagonal 2 arriba para abajo
     if board [0][0] == malo and board[1][1] == malo and board [2][2] == "-":
-        return [2,2] 
+        return board [2,2] 
     #Bloqueo diagonal 2 cubriendo centros
     if board [2][2] == malo and board[0][0] == malo and board [1][1] == "-":
-        return [1,1] 
+        return board [1,1] 
 
 
     #Mis movimientos (fuera de asegurar victoria, bloquear, buscar centro y buscar una esquina) no son importantes
     x = randint(0,2)
     y = randint(0, 2)
-    return [x, y]
+    return board [x, y]
 
 
 

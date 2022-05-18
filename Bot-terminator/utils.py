@@ -69,9 +69,9 @@ def decide_move(board: list, player_id: str) -> list:
     """
     Decides next move to make.
     """
-    malo = "0"
-    if player_id is "0":
-        malo = "X"
+    malo = "X"
+    if player_id == "X":
+        malo = "0"
 
     #Centro es clave, en caso de perder el centro busco la esquina
     if board [1][1] == "-":
@@ -206,7 +206,7 @@ def decide_move(board: list, player_id: str) -> list:
     #Mis movimientos (fuera de asegurar victoria, bloquear, buscar centro y buscar una esquina) no son importantes
     x = randint(0,2)
     y = randint(0, 2)
-    return board [x, y]
+    return [x, y]
 
 
 

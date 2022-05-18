@@ -5,7 +5,7 @@ import utils
 
 def main():
 
-    NAME = "terminatord"
+    NAME = "terminator"
     print("\n------- Starting tic-tac-toe bot -------\n")
 
     # Register phase begins
